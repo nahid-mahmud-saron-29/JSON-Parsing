@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- ১. লোড বাটন -->
+    <Button
+        android:id="@+id/btnLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Data"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- নতুন যুক্ত করা হয়েছে: প্রোগ্রেস বার -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone" /> <!-- শুরুতে দেখানোর জন্য visible করা আছে, চাইলে xml-এ "gone" করে রাখতে পারেন -->
+
+    <!-- ২. নামের লেবেল -->
+    <TextView
+        android:id="@+id/tvNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- ৩. যেখানে আসল নাম দেখাবে -->
+    <TextView
+        android:id="@+id/tvShowName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="John Doe"
+        android:textSize="18sp" />
+
+    <!-- ৪. ইমেজ ভিউ -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_launcher_background"
+        tools:srcCompat="@tools:sample/avatars"/>
+
+</LinearLayout>
